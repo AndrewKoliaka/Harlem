@@ -1,0 +1,10 @@
+include ../mixins/btn
+
+section.order-form
+    h2.order-form__title Закажите док-станцию сейчас
+    .container
+        form(action="#" method="POST").order-form__form
+            input(type="text" name="username" placeholder="Ваше имя" max="25" required).order-form__input
+            input(type="text" name="userphone" placeholder="Ваш телефон" max="20" required).order-form__input
+            input(type="submit" value="Заказать").order-form__submit-btn
+        .order-form__description В ближайшие 15 минут с Вами свяжется наш менеджер для уточнения деталей

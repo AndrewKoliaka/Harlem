@@ -1,0 +1,54 @@
+.order-form {
+    padding-top: 65px;
+    padding-bottom: 60px;
+    text-align: center;
+
+    &__title {
+        text-align: center;
+        color:  #262626;
+        font-family: $ffMP-Semibold-SemiCn;
+        font-size: 3.499rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    &__input {
+        padding: 15px 25px;
+        padding-right: 10px;
+        margin: 0 25px;
+        min-width: 260px;
+        font-family: $ffMP-Light;
+        font-size: 1.333rem;
+        font-weight: 300;
+        border: 2px solid #b2b2b2;
+        border-radius: 25px;
+
+        &:placeholder {
+            color:  rgba(0, 0, 0, 0.65);
+        }
+    }
+
+    &__submit-btn {
+        @extend .btn;
+        padding: 16px 0;
+        min-width: 260px;
+        color:  #232323;
+        font-family: $ffMP-Regular;
+        font-size: 1.5rem;
+        font-weight: 400;
+        border-radius: 25px;
+        border: none;
+    }
+
+    &__form {
+        margin-top: 60px;
+    }
+
+    &__description {
+        margin-top: 65px;
+        color:  rgba(0, 0, 0, 0.65);
+        font-family: $ffMP-Light;
+        font-size: 1.333rem;
+        font-weight: 300;
+    }
+}

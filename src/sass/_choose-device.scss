@@ -1,0 +1,96 @@
+.choose-device {
+    padding-top: 70px;
+    padding-bottom: 85px;
+
+    &__title {
+        text-align: center;
+        font-family: $ffMP-Semibold-SemiCn;
+        color:  #262626;
+        font-size: 3.499rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__device {
+        width: 30%;
+        margin-top: 105px;
+        text-align: center;
+    }
+
+    &__slider-container {
+        padding-bottom: 50px;
+
+    }
+
+    &__slide {
+        height: 363px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+
+        &:nth-of-type(1) {
+            background-image: url('../img/dock-station1.png');
+        }
+
+        &:nth-of-type(2) {
+            background-image: url('../img/dock-station2.png');
+        }
+
+        &:nth-of-type(3) {
+            background-image: url('../img/dock-station3.png');
+        }
+    }
+
+    &__pagination {
+        .swiper-pagination-bullet {
+            margin: 0 8px;
+            transition: $tr3s;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 2px solid #c4c4c4;
+            width: 17px;
+            height: 17px;
+        }
+
+        .swiper-pagination-bullet-active {
+            border-width: 3px;
+            border-color: #7b7b7b;
+        }
+    }
+
+    &__color-text {
+        padding-top: 0;
+        padding-bottom: 5px;
+        font-family: $ffMP-Light;
+        color:  #7e7e7e;
+        font-size: 1.333rem;
+        font-weight: 300;
+        border-bottom: 1px solid #7e7e7e;
+    }
+
+    &__name {
+        margin-top: 8px;
+        color:  #262626;
+        font-family: $ffMP-Semibold;
+        font-size: 1.833rem;
+        font-weight: 600;
+    }
+
+    &__price {
+        color:  #262626;
+        font-family: $ffMP-Regular;
+        font-size: 1.833rem;
+        font-weight: 400;
+    }
+
+    &__btn {
+        margin-top: 18px;
+        padding: 14px 42px;
+    }
+}

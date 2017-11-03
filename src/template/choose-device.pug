@@ -1,6 +1,24 @@
+include ../mixins/btn
+
+- var dockStationNames = ['Белый орегон', 'Белый вермонт', 'Белый иллинойс', 'Черный орегон', 'Черный вермонт', 'Черный иллинойс']
+- var docStationImages = ['../img/dock-station1.png', '../img/dock-station2.png', '../img/dock-station3.png']
+
+- var btnText = 'Заказать'
+- var btnHref = '#order-form'
+
 section.choose-device
-    h2.choose-device__title
+    h2.choose-device__title Выберите свою док-станцию
     .container
-        .choose-device__row
-            .choose-device__device
-                .choose-device__img
+        .choose-device__container
+            -
+            each name in dockStationNames
+                .choose-device__device
+                    .choose-device__slider-container.swiper-container
+                        .swiper-wrapper
+                            - for (var i = 0; i < 3; i++)
+                                .choose-device__slide.swiper-slide
+                        .choose-device__pagination.swiper-pagination
+                    .choose-device__color-text Цвет
+                    .choose-device__name= name
+                    .choose-device__price 4990 р.
+                    +btn(btnText, btnHref).choose-device__btn

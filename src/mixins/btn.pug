@@ -1,2 +1,3 @@
 mixin btn(text, href)
+    -var href = href || '#'
     a(href=href).btn&attributes(attributes)= text
