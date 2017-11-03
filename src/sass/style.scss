@@ -1,0 +1,15 @@
+//Подключение библиотек
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/bootstrap-4-grid/css/grid.min";
+@import "../../node_modules/swiper/dist/css/swiper.min";
+
+//Вспомогательные файлы, так же то что генерируется галпом
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/helpers";
+@import "utils/fonts";
+
+// elements
+
+//Подключение основных файлов
+@import "main";

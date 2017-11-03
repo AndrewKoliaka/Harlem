@@ -1,0 +1,54 @@
+%reset_link {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.hidden-480 {
+    @include respond-to(smartphone) {
+        display: none !important;
+    }
+}
+
+.hidden-320 {
+    @include respond-to(phone) {
+        display: none !important;
+    }
+}
+
+.hidden-768 {
+    @include respond-to(phone-lend) {
+        display: none !important;
+    }
+}
+
+.hidden-992 {
+    @include respond-to(tablet){
+        display: none !important;
+    }
+}
+
+.visible-992 {
+    display: none !important;
+
+    @include respond-to(tablet){
+        display: block !important;
+    }
+}
+
+.visible-320 {
+    display: none;
+    @include respond-to(phone){
+        display: block !important;
+    }
+}
