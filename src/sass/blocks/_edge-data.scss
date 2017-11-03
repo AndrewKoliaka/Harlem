@@ -1,0 +1,45 @@
+.edge-data {
+    display: flex;
+    justify-content: space-between;
+
+
+    &__left-block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        margin-left: 30px;
+        color:  #777777;
+        font-family: $ffMP-Light;
+        font-size: 1.499rem;
+        font-weight: 300;
+    }
+
+    &__phone {
+        font-family: $ffMP-SemiCn;
+        color:  #262626;
+        font-size: 1.499rem;
+        font-weight: 600;
+        line-height: 1.201;
+    }
+
+    &__right-block {
+        text-align: center;
+
+        @include respond-to(tablet) {
+            display: none;
+        };
+    }
+
+    &__phone-description {
+        font-family: $ffMP-Light;
+        color:  #262626;
+        font-size: 1.333rem;
+        font-weight: 300;
+        line-height: 1.35;
+    }
+
+    &__logo {
+    }
+}

@@ -1,0 +1,23 @@
+.header {
+    padding-top: 25px;
+    padding-bottom: 100px;
+    background: #fff url('../img/header_bg.jpg') no-repeat center center;
+    background-size: cover;
+
+    &__title {
+        margin-top: 115px;
+        color:  #232323;
+        font-family: $ffMP-SemiCn;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    &__text {
+        margin-top: 40px;
+        margin-bottom: 140px;
+        color:  #242424;
+        font-family: $ffMP-Light;
+        font-size: 1.999rem;
+        font-weight: 300;
+    }
+}

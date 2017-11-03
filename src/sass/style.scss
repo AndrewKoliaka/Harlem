@@ -9,7 +9,16 @@
 @import "utils/helpers";
 @import "utils/fonts";
 
+// blocks
+@import "blocks/edge-data";
+@import "blocks/btn";
+
 // elements
 
 //Подключение основных файлов
 @import "main";
+@import "header";
+@import "details";
+@import "life";
+@import "composition";
+@import "quality"

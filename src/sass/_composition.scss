@@ -1,0 +1,54 @@
+.composition {
+    padding-top: 60px;
+    padding-bottom: 70px;
+
+    &__title {
+        text-align: center;
+        font-family: $ffMP-Semibold;
+        color:  #262626;
+        font-size: 3.499rem;
+        font-weight: 600;
+    }
+
+    &__row {
+        padding: 130px 0;
+
+
+        &:first-of-type {
+            background: #fff url('../img/wood.png') no-repeat;
+            background-position: center right;
+            background-size: 50%;
+        }
+
+        &:last-of-type {
+            background: #fff url('../img/stone.png') no-repeat;
+            background-position: center left;
+            background-size: 50%;
+
+            .container {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__block {
+        max-width: 46%;
+    }
+
+    &__block-title {
+        font-family: $ffMP-Semibold-SemiCn;
+        color:  #262626;
+        font-size: 2.166rem;
+        font-weight: 600;
+    }
+
+    &__block-text {
+        margin-top: 30px;
+        font-family: $ffMP-Light;
+        color:  #262626;
+        font-size: 1.666rem;
+        font-weight: 300;
+        line-height: 1.242
+    }
+}

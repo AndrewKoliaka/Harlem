@@ -1,0 +1,53 @@
+.details {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    &__title {
+        text-align: center;
+        color:  #262626;
+        font-family: $ffMP-Semibold-SemiCn;
+        font-size: 3.499rem;
+        font-weight: 600;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 90px;
+
+        &:last-child {
+            margin-top: 100px;
+        }
+
+        @include respond-to(tablet) {
+            flex-wrap: wrap;
+        };
+    }
+
+    &__img-container {
+        height: 150px;
+    }
+
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__detail {
+        display: inline-block;
+        text-align: center;
+        width: 40%;
+
+        @include respond-to(tablet) {
+            width: 100%;
+        };
+    }
+
+    &__caption {
+        margin-top: 20px;
+        font-family: $ffMP-Light;
+        color:  #262626;
+        font-size: 1.499rem;
+        font-weight: 300;
+    }
+}

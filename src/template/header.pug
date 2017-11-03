@@ -1,3 +1,6 @@
+include ../mixins/edge-data
+include ../mixins/btn
+
 doctype html
 html(lang="ru")
     head
@@ -7,4 +10,13 @@ html(lang="ru")
         title Harlem
         link(rel="stylesheet", href="css/style.css")
     body
-        h1 hello
+        header.header
+            .container
+                +edge-data()
+                .row
+                    .col-lg-9
+                        h1.header__title Используйте и одновременно заряжайте свой смартфон с  док-станцией из массива дуба и акрилового камня
+                .row
+                    .col-lg-6
+                        p.header__text Выберите одну из 6 цветовых моделей. Бесплатная доставка по всей России в течение 3-х дней.
+                +btn('Выбрать док-станцию', 'index.html#choose-device').header__btn
