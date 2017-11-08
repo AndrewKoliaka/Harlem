@@ -3,12 +3,40 @@
     padding-bottom: 200px;
     color: #fff;
     text-align: center;
-    background: #fff url('../img/quality_bg.png') no-repeat;
+    background: #fff url('../img/quality_bg.jpg') no-repeat;
     background-size: cover;
+
+    @include respond-to(wide) {
+        background-image: url('../img/quality_bg-small.jpg');
+        padding-bottom: 123px;
+    };
+
+    @include respond-to(phone-lend) {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    };
 
     &__subtitle {
         font-family: #ffMP-SemiCn;
         font-size: 3.166rem;
+
+        @include respond-to(wide){
+            font-family: $ffMP-Semibold-SemiCn;
+            font-size: 4.666rem;
+            font-weight: 600;
+        };
+
+        @include respond-to(tablet) {
+            font-size: 3rem;
+        }
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 21.33px;
+        };
     }
 
     &__title {
@@ -18,21 +46,60 @@
         font-size: 4.166rem;
         text-transform: uppercase;
         font-weight: 700;
+
+        @include respond-to(tablet) {
+            font-size: 3rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 21.33px;
+        };
     }
 
     &__text {
-        max-width: 70%;
+        max-width: 63%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 150px;
         color:  #ffffff;
         font-family: $ffMP-Light;
-        font-size: 1.666rem;
+        font-size: 1.625rem;
         font-weight: 300;
         line-height: 1.242;
 
+        @include respond-to(wide) {
+            margin-top: 100px;
+        };
+
+        @include respond-to(tablet) {
+            margin-top: 50px;
+            max-width: 90%;
+            font-weight: 300;
+            line-height: 1.235;
+        };
+
+        @include respond-to(phone-lend) {
+            max-width: 100%;
+            font-size: 1.5rem;
+            margin-top: 40px;
+        };
+
+        @include respond-to(smartphone) {
+            margin-top: 25px;
+            font-size: 1rem;
+        };
+
         &:nth-of-type(2) {
             margin-top: 30px;
+
+            @include respond-to(smartphone) {
+                margin-top: 10px;
+            };
         }
+
     }
 }

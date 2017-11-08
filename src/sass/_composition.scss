@@ -2,22 +2,64 @@
     padding-top: 60px;
     padding-bottom: 70px;
 
+    @include respond-to(wide) {
+        padding-bottom: 40px;
+    };
+
+    @include respond-to(smartphone) {
+        padding: 30px 0;
+    };
+
     &__title {
         text-align: center;
         font-family: $ffMP-Semibold;
-        color:  #262626;
+        color:  #212121;
         font-size: 3.499rem;
         font-weight: 600;
+
+        @include respond-to(tablet) {
+            font-size: 3rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 2.5rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 21.33px;
+        };
     }
 
     &__row {
         padding: 130px 0;
 
+        @include respond-to(wide) {
+            padding: 95px 0;
+        };
+
+        @include respond-to(phone-lend) {
+            padding: 40px 0;
+        };
+
 
         &:first-of-type {
             background: #fff url('../img/wood.png') no-repeat;
-            background-position: center right;
+            background-position: top 96px right;
             background-size: 50%;
+
+            @media screen and (max-width: 1200px) {
+                background-position: center right;
+            }
+
+            @include respond-to(wide) {
+                background-position: bottom right;
+                background-size: 90%;
+                padding-bottom: 480px;
+            };
+
+            @include respond-to(tablet) {
+                padding-bottom: 50%;
+            };
         }
 
         &:last-of-type {
@@ -25,30 +67,76 @@
             background-position: center left;
             background-size: 50%;
 
+            @include respond-to(wide) {
+                background-position: bottom left;
+                background-size: 90%;
+                padding-bottom: 600px;
+            };
+
+            @include respond-to(tablet) {
+                background-size: 70%;
+                padding-bottom: 50%;
+            };
+
             .container {
                 display: flex;
                 justify-content: flex-end;
+
+                @include respond-to(wide) {
+                    justify-content: flex-start;
+                };
             }
         }
     }
 
     &__block {
-        max-width: 46%;
+        max-width: 42%;
+
+        @include respond-to(wide) {
+            max-width: 70%;
+        };
     }
 
     &__block-title {
         font-family: $ffMP-Semibold-SemiCn;
-        color:  #262626;
+        color:  #212121;
         font-size: 2.166rem;
         font-weight: 600;
+
+        @include respond-to(tablet) {
+            font-size: 2.3rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 1.1rem;
+        };
     }
 
     &__block-text {
         margin-top: 30px;
         font-family: $ffMP-Light;
-        color:  #262626;
-        font-size: 1.666rem;
+        color:  #212121;
+        font-size: 1.625rem;
         font-weight: 300;
-        line-height: 1.242
+        line-height: 1.5;
+
+        @include respond-to(tablet) {
+            margin-top: 45px;
+            color:  #212121;
+            line-height: 1.235;
+        };
+
+        @include respond-to(phone-lend) {
+            margin-top: 20px;
+            font-size: 1.5rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 1rem;
+        };
     }
 }

@@ -2,14 +2,46 @@
     padding-top: 75px;
     padding-bottom: 100px;
     text-align: center;
-    background: #fff url('../img/life_bg.png') no-repeat;
+    background: #fff url('../img/life_bg.jpg') no-repeat;
     background-size: cover;
 
+    @include respond-to(wide) {
+        background-image: url('../img/life_bg-small.jpg');
+    };
+
+    @include respond-to(phone-lend) {
+        padding: 40px 0;
+    };
+
+    @include respond-to(smartphone) {
+        padding: 30px 0;
+    };
+
     &__title {
-        color:  #262626;
+        color:  #212121;
         font-family: $ffMP-Semibold-SemiCn;
         font-size: 3.833rem;
         font-weight: 600;
+
+        @include respond-to(tablet) {
+            font-size: 3rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 21.33px;
+        };
+    }
+
+    &__title-br {
+        display: none;
+
+        @include respond-to(wide) {
+            display: block;
+        };
     }
 
     &__text {
@@ -20,8 +52,35 @@
         margin-left: auto;
         margin-right: auto;
         max-width: 63%;
-        color:  #262626;
-        font-size: 1.666rem;
+        color:  #212121;
+        font-size: 1.625rem;
         font-weight: 300;
+
+        @include respond-to(wide) {
+            max-width: 91%;
+            color:  #212121;
+            font-weight: 300;
+            line-height: 1.235;
+        }
+
+        @include respond-to(tablet) {
+            font-size: 2rem;
+        }
+
+        @include respond-to(phone-lend) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 1.5rem;
+        };
+
+        @include respond-to(smartphone) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        };
+    }
+
+    &__text-br {
+        @extend .life__title-br;
     }
 }

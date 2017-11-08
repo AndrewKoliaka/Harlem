@@ -1,0 +1,101 @@
+.popup1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+
+    &--visible {
+        display: flex;
+    }
+
+    &__window {
+        position: relative;
+    }
+
+    &__content {
+        margin-right: 67px;
+        padding-top: 95px;
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 85px;
+        background-color: #fff;
+        border-radius: 30px;
+
+        @include respond-to(wide) {
+            margin-right: auto;
+            padding-right: 40px;
+            padding-left: 40px;
+        };
+
+        @include respond-to(tablet) {
+            margin: 0 10px;
+        };
+
+        @include respond-to(phone-lend) {
+            padding: 30px 40px;
+        };
+
+        @include respond-to(smartphone) {
+            padding: 30px 20px;
+        };
+
+    }
+
+    &__title {
+        font-family: $ffMP-Semibold;
+        color:  #292929;
+        font-size: 2.62rem;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+
+        @include respond-to(wide) {
+            font-size: 4.813rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+        };
+
+    }
+
+    &__text {
+        margin-top: 30px;
+        font-family: $ffMP-Light;
+        color:  #1a1a1a;
+        font-size: 2.167rem;
+        font-weight: 300;
+        line-height: 1;
+
+        @include respond-to(wide) {
+            font-size: 3.25rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 1.5rem;
+        };
+
+        @include respond-to(smartphone) {
+            margin-top: 15px;
+            font-size: 1.3rem;
+        };
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include respond-to(wide) {
+            display: none;
+        };
+    }
+
+}

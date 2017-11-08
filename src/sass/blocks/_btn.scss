@@ -1,9 +1,30 @@
 .btn {
     padding: 19px 45px;
-    color:  #232323;
+    color:  #1d1d1d;
     font-family: $ffMP-Regular;
     font-size: 1.5rem;
     font-weight: 400;
     border-radius: 12px;
-    background-color:  #f6dc44;
+    background-color:  #ffdd2d;
+    transition: $tr3s;
+
+    @include respond-to(tablet) {
+        padding: 25px 50px;
+        font-size: 2rem;
+        border-radius: 5px;
+    };
+
+    @include respond-to(phone-lend) {
+        padding: 15px 20px;
+        font-size: 1.5rem;
+    };
+
+    @include respond-to(smartphone) {
+        padding: 15px 30px;
+        font-size: 15.4px;
+    };
+
+    &:hover {
+        background-color: darken(#ffdd2d, 10%);
+    }
 }

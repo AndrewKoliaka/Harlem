@@ -1,53 +1,139 @@
 .choose-device {
     padding-top: 70px;
     padding-bottom: 85px;
+    overflow: hidden;
+
+    @include respond-to(phone-lend) {
+        padding: 40px 0;
+    };
 
     &__title {
         text-align: center;
         font-family: $ffMP-Semibold-SemiCn;
-        color:  #262626;
+        color:  #212121;
         font-size: 3.499rem;
         font-weight: 600;
         line-height: 1;
+
+        @include respond-to(tablet) {
+            font-size: 3rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 21.33px;
+        };
+
+        br {
+            display: none;
+
+            @include respond-to(wide) {
+                display: block;
+            };
+        }
+    }
+
+    &__b-container {
+        @include respond-to(wide) {
+            margin-left: 0;
+            margin-right: 0;
+            min-width: 100%;
+        };
     }
 
     &__container {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include respond-to(phone-lend) {
+            justify-content: center;
+        };
     }
 
     &__device {
         width: 30%;
         margin-top: 105px;
         text-align: center;
+
+        @include respond-to(tablet) {
+            margin-top: 45px;
+        };
+
+        @include respond-to(phone-lend) {
+            margin-top: 130px;
+            width: 80%;
+        };
+
+        @include respond-to(phone-lend) {
+            margin-top: 40px;
+        };
+
+        @include respond-to(smartphone) {
+            margin-top: 60px;
+        };
     }
 
     &__slider-container {
         padding-bottom: 50px;
 
+
+        @include respond-to(phone-lend) {
+            padding-bottom: 10px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: visible;
+        };
+    }
+
+    &__wrapper {
+        overflow-x: visible;
+    }
+
+    &__b-container {
+        @include respond-to(phone-lend) {
+            padding: 0;
+        };
     }
 
     &__slide {
-        height: 363px;
-        background-position: center center;
-        background-repeat: no-repeat;
         border-radius: 20px;
+        cursor: pointer;
 
-        &:nth-of-type(1) {
-            background-image: url('../img/dock-station1.png');
+        img {
+            border-radius: 20px;
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+
+            @include respond-to(phone-lend) {
+                width: 90%;
+            };
         }
 
-        &:nth-of-type(2) {
-            background-image: url('../img/dock-station2.png');
-        }
+        @include respond-to(phone-lend) {
+            border-radius: 30px;
 
-        &:nth-of-type(3) {
-            background-image: url('../img/dock-station3.png');
-        }
+            img {
+                border-radius: 30px;
+            }
+        };
+
+        @include respond-to(tablet) {
+            min-height: 60%;
+            min-width: 50%;
+        };
     }
 
     &__pagination {
+        @include respond-to(phone-lend) {
+            display: none;
+        };
+
         .swiper-pagination-bullet {
             margin: 0 8px;
             transition: $tr3s;
@@ -72,25 +158,77 @@
         font-size: 1.333rem;
         font-weight: 300;
         border-bottom: 1px solid #7e7e7e;
+
+        @include respond-to(phone-lend) {
+            font-size: 1.8rem;
+            border-bottom-width: 1px;
+            max-width: 90%;
+            margin-left: 5%;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 1rem;
+        };
     }
 
     &__name {
         margin-top: 8px;
-        color:  #262626;
+        color:  #212121;
         font-family: $ffMP-Semibold;
         font-size: 1.833rem;
         font-weight: 600;
+
+        @include respond-to(wide) {
+            margin-top: 15px;
+        };
+
+        @include respond-to(tablet) {
+            font-size: 1.8rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 19.8px;
+        };
     }
 
     &__price {
-        color:  #262626;
+        color:  #212121;
         font-family: $ffMP-Regular;
         font-size: 1.833rem;
         font-weight: 400;
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 19.8px;
+        };
     }
 
     &__btn {
+        @extend .btn;
+
         margin-top: 18px;
         padding: 14px 42px;
+
+        @include respond-to(tablet) {
+            font-size: 1.5rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+            padding: 15px 40px;
+        };
+
+        @include respond-to(smartphone) {
+            padding: 10px 30px;
+            font-size: 1rem;
+        }
     }
+
 }

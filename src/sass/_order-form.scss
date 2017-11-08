@@ -3,25 +3,99 @@
     padding-bottom: 60px;
     text-align: center;
 
+    @include respond-to(tablet) {
+        padding: 40px 0;
+    };
+
+    @include respond-to(smartphone) {
+        padding: 30px 0;
+    };
+
     &__title {
         text-align: center;
-        color:  #262626;
+        color:  #212121;
         font-family: $ffMP-Semibold-SemiCn;
         font-size: 3.499rem;
         font-weight: 600;
         line-height: 1;
+
+        @include respond-to(tablet) {
+            font-size: 3rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 21.33px;
+        };
+
+        br {
+            display: none;
+
+            @include respond-to(tablet) {
+                display: block;
+            };
+        }
+    }
+
+    &__container {
+        @include respond-to(phone-lend) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        };
     }
 
     &__input {
         padding: 15px 25px;
         padding-right: 10px;
-        margin: 0 25px;
         min-width: 260px;
         font-family: $ffMP-Light;
         font-size: 1.333rem;
         font-weight: 300;
         border: 2px solid #b2b2b2;
-        border-radius: 25px;
+        border-radius: 115px;
+
+        &:nth-of-type(2) {
+            margin: 0 25px;
+
+            @include respond-to(tablet) {
+                margin-right: 0;
+                margin-left: 0;
+                margin-bottom: 60px;
+            };
+
+            @include respond-to(tablet) {
+                margin-bottom: 40px;
+            };
+
+            @include respond-to(phone-lend) {
+                margin-bottom: 20px;
+            };
+        }
+
+        @include respond-to(tablet) {
+            margin: 0;
+            width: 100%;
+            border-radius: 100px;
+
+            font-size: 2rem;
+            margin-bottom: 40px;
+            padding: 20px 30px;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding: 10px 25px;
+        };
+
+        @include respond-to(smartphone) {
+            width: 80%;
+            font-size: 1rem;
+        };
 
         &:placeholder {
             color:  rgba(0, 0, 0, 0.65);
@@ -32,23 +106,58 @@
         @extend .btn;
         padding: 16px 0;
         min-width: 260px;
-        color:  #232323;
+        color:  #1d1d1d;
         font-family: $ffMP-Regular;
         font-size: 1.5rem;
         font-weight: 400;
-        border-radius: 25px;
+        border-radius: 115px;
         border: none;
+        cursor: pointer;
+
+        @include respond-to(tablet) {
+            width: 100%;
+            border-radius: 100px;
+
+            font-size: 2rem;
+            margin-bottom: 40px;
+            padding: 20px 30px;
+        }
+
+        @include respond-to(phone-lend) {
+            font-size: 1.5rem;
+            padding: 10px 25px;
+        };
+
+        @include respond-to(smartphone) {
+            width: 80%;
+            font-size: 1rem;
+            margin-bottom: 0;
+        };
     }
 
     &__form {
         margin-top: 60px;
+
+        @include respond-to(smartphone) {
+            margin-top: 30px;
+        };
     }
 
     &__description {
         margin-top: 65px;
         color:  rgba(0, 0, 0, 0.65);
         font-family: $ffMP-Light;
-        font-size: 1.333rem;
+        font-size: 21.33px;
         font-weight: 300;
+
+        @include respond-to(tablet) {
+            margin-top: 20px;
+            font-size: 1.5rem;
+        };
+
+        @include respond-to(smartphone) {
+            margin-top: 35px;
+            font-size: .9rem;
+        };
     }
 }

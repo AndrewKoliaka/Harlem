@@ -7,8 +7,14 @@
         ]
 
 section.comfort
-    h2.comfort__title Все сделано для вашего комфорта
+    h2.comfort__title Все сделано для  
+        br
+        | вашего комфорта
     .comfort__container.container
         - for (var i = 0; i < 4; i++)
             .comfort__text-block
                 p.comfort__text= texts[i]
+        ul.comfort__list
+            - for (var i = 0; i < 4; i++)
+                li
+                    p.comfort__text= texts[i]

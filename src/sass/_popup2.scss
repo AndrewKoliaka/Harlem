@@ -1,0 +1,98 @@
+.popup2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+    &--visible {
+        display: flex;
+    }
+
+    &__window {
+        display: inline-block;
+        position: relative;
+        margin: 50px 0;
+        padding: 0 135px;
+
+        @include respond-to(wide) {
+            padding: 0 20px;
+        };
+    }
+
+    &__next, &__prev {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        background-image: url('../img/next.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+
+        @include respond-to(wide) {
+            display: none;
+        };
+    }
+
+    &__next {
+        right: 0;
+    }
+
+    &__prev {
+        left: 0;
+        transform: rotate(180deg);
+    }
+
+    &__container {
+        background-color: #f1f1f1;
+
+        width: 830px;
+        height: 830px;
+
+
+        @include respond-to(wide) {
+            width: 800px;
+            height: 800px;
+        };
+
+        @include respond-to(tablet) {
+            width: 600px;
+            height: 600px;
+        };
+
+        @media screen and (max-width: 530px) {
+            width: 400px;
+            height: 400px;
+        }
+
+    }
+
+    &__slide-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__close-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        right: 66px;
+        background-image: url('../img/close.png');
+        background-size: contain;
+    }
+}

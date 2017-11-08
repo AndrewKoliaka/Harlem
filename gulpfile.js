@@ -1,6 +1,3 @@
-/**
- * Created by Anton on 20.05.2016.
- */
 'use strict';
 var gulp = require('gulp'),
     watch = require('gulp-watch'),

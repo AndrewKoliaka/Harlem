@@ -14,6 +14,15 @@ a {
     color: inherit;
 }
 
+p {
+    @include respond-to(wide) {
+        font-family: $ffMP-Light;
+        color:  #212121;
+        font-size: 3.499rem;
+        font-weight: 300;
+    };
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -23,4 +32,12 @@ ul {
 h1, h2, p, figure {
     padding: 0;
     margin: 0;
+}
+
+input {
+    outline: none;
+}
+
+.cbalink {
+    display: none !important;
 }

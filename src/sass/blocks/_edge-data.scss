@@ -2,10 +2,20 @@
     display: flex;
     justify-content: space-between;
 
-
     &__left-block {
         display: flex;
         align-items: center;
+
+        @include respond-to(phone-lend) {
+            padding-right: 15px;
+            width: 100%;
+            justify-content: space-between;
+        };
+
+        @include respond-to(smartphone) {
+            width: 100%;
+            justify-content: space-between;
+        };
     }
 
     &__text {
@@ -14,16 +24,54 @@
         font-family: $ffMP-Light;
         font-size: 1.499rem;
         font-weight: 300;
+
+        @include respond-to(wide) {
+            margin-left: 65px;
+            font-size: 2.813rem;
+        };
+
+        @include respond-to(tablet) {
+            font-size: 1.5rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 1.2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 1rem;
+            margin-left: 10px;
+        };
+
+        @media screen and(max-width: 350px) {
+            font-size: .9rem;
+        }
     }
 
     &__phone {
         font-family: $ffMP-SemiCn;
-        color:  #262626;
+        color:  #212121;
         font-size: 1.499rem;
         font-weight: 600;
         line-height: 1.201;
         letter-spacing: 1.5px;
         transition: $tr3s;
+
+        @include respond-to(wide) {
+            color:  #454545;
+        };
+
+        @include respond-to(tablet) {
+            font-size: 2.5rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 1.2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 1rem;
+        };
 
         &:hover {
             text-decoration: underline;
@@ -33,19 +81,65 @@
     &__right-block {
         text-align: center;
 
-        @include respond-to(tablet) {
-            display: none;
+        @include respond-to(smartphone) {
+            margin-left: 10px;
         };
     }
 
     &__phone-description {
         font-family: $ffMP-Light;
-        color:  #262626;
+        color:  #212121;
         font-size: 1.333rem;
         font-weight: 300;
         line-height: 1.35;
+
+        @include respond-to(wide) {
+            color:  #595959;
+        };
+
+        @include respond-to(tablet) {
+            font-size: 2rem;
+        };
+
+        @include respond-to(phone-lend) {
+            font-size: 1.2rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 1rem;
+        };
     }
 
     &__logo {
+        display: flex;
+        align-items: center;
+        width: 167px;
+        height: 30px;
+
+        &--1080 {
+            display: none;
+
+            @include respond-to(smartphone) {
+                max-width: 100px;
+            };
+        }
+
+        @include respond-to(wide) {
+            height: auto;
+            width: auto;
+        };
+
+        @include respond-to(phone-lend) {
+            height: 30px;
+        };
+
+        @include respond-to(smartphone) {
+            width: 100px;
+        };
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
     }
 }

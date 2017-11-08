@@ -4,20 +4,96 @@
     background: #fff url('../img/header_bg.jpg') no-repeat center center;
     background-size: cover;
 
+    @include respond-to(wide) {
+
+        padding-bottom: 95px;
+        background-image: url('../img/header_bg-small.jpg');
+
+        &__data-wrapper {
+            .edge-data__right-block {
+                display: none;
+            }
+        }
+    }
+
+    @include respond-to(phone-lend) {
+        padding-top: 10px;
+        padding-bottom: 50px;
+    };
+
+    &__container {
+        padding-right: 0;
+    }
+
     &__title {
-        margin-top: 115px;
-        color:  #232323;
+        margin-top: 102px;
+        width: 72%;
+        color:  #1d1d1d;
         font-family: $ffMP-SemiCn;
         font-size: 3rem;
         font-weight: 600;
+
+        @include respond-to(wide) {
+            margin-top: 95px;
+            font-family: $ffMP-Semibold-SemiCn;
+            color:  #232323;
+            font-weight: 600;
+        };
+
+        @include respond-to(tablet) {
+            width: 100%;
+            font-size: 3rem;
+        };
+
+        @include respond-to(phone-lend) {
+            margin-top: 60px;
+            font-size: 2rem;
+        };
+
+        @include respond-to(smartphone) {
+            margin-top: 25px;
+            padding-right: 10px;
+            font-size: 21.33px;
+        };
     }
 
     &__text {
+        width: 50%;
         margin-top: 40px;
-        margin-bottom: 140px;
-        color:  #242424;
+        margin-bottom: 145px;
+        color:  #1e1e1e;
         font-family: $ffMP-Light;
         font-size: 1.999rem;
         font-weight: 300;
+
+        @include respond-to(wide) {
+            margin-top: 85px;
+            margin-bottom: 1180px;
+            color:  #242424;
+            font-weight: 300;
+        };
+
+        @include respond-to(tablet) {
+            width: 100%;
+            margin-bottom: 900px;
+            font-size: 2.5rem;
+        };
+
+        @include respond-to(phone-lend) {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            margin-bottom: 800px;
+        };
+
+        @include respond-to(smartphone) {
+            margin-bottom: 500px;
+            margin-top: 25px;
+        };
+    }
+
+    &__btn-wrapper {
+        @include respond-to(wide) {
+            text-align: center;
+        };
     }
 }

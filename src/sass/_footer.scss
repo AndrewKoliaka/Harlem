@@ -1,7 +1,41 @@
 .footer {
     &__wrapper {
-        padding-top: 60px;
         padding-bottom: 65px;
+        padding-left: 0;
+        padding-right: 0;
+
+        @include respond-to(wide){
+
+            .edge-data__text {
+                display: none;
+            }
+
+            .edge-data__logo--1080 {
+                display: block !important;
+            }
+
+            .edge-data__logo {
+                display: none;
+            }
+        };
+
+        @include respond-to(phone-lend) {
+            padding: 30px 15px;
+            padding-top: 0;
+            padding-bottom: 30px;
+        };
+    }
+
+    &__data {
+        padding-top: 60px;
         border-top: 1px solid #7e7e7e;
+
+        @include respond-to(phone-lend) {
+            padding-top: 30px;
+
+            .edge-data__left-block {
+                width: auto;   
+            }
+        };
     }
 }

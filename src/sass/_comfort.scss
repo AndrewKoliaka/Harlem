@@ -2,8 +2,24 @@
     padding-top: 80px;
     padding-bottom: 870px;
     color: #fff;
-    background: url('../img/comfort_bg.png') no-repeat center center;
+    background: url('../img/comfort_bg.jpg') no-repeat center center;
     background-size: cover;
+
+    @include respond-to(wide) {
+        background-image: url('../img/comfort_bg-small.jpg');
+        padding-bottom: 125px;
+    };
+
+    @include respond-to(phone-lend) {
+        padding-bottom: 50px;
+    };
+
+    @include respond-to(smartphone) {
+        padding-top: 30px;
+        background-position-x: 30%;
+        background-position-y: 14%;
+
+    };
 
     &__title {
         text-align: center;
@@ -11,34 +27,128 @@
         font-family: $ffMP-Semibold-SemiCn;
         font-size: 3.499rem;
         font-weight: 600;
+
+        @include respond-to(tablet) {
+            font-size: 3rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 21.33px;
+        };
+
+        br {
+            display: none;
+
+            @include respond-to(wide) {
+                display: block;
+            };
+        }
     }
 
     &__container {
         position: relative;
     }
 
+    &__list {
+        display: none;
+        list-style-type: disc;
+
+        @include respond-to(wide) {
+            display: block;
+            margin-top: 100%;
+        };
+
+        @include respond-to(tablet) {
+            margin-top: 130%;
+            font-size: 20px;
+        };
+
+        @include respond-to(phone-lend) {
+            margin-top: 120%;
+        };
+
+        @media screen and(max-width: 490px) {
+            margin-top: 243%;
+        }
+
+        @include respond-to(smartphone) {
+            margin-top: 140%;
+        };
+
+        @media screen and(max-width: 359px) {
+            margin-top: 150%;
+        }
+
+        @include respond-to(phone) {
+            margin-top: 160%;
+        };
+
+        li {
+            margin-left: 50px;
+            font-size: 65px;
+
+            @include respond-to(tablet) {
+                margin-top: 20px;
+                font-size: 30px;
+            };
+
+            @include respond-to(smartphone) {
+                margin-top: 10px;
+                font-size: 20px;
+            };
+        }
+    }
+
     &__text-block {
         position: absolute;
         max-width: 28%;
 
+        @include respond-to(wide) {
+            display: none;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            max-width: 35%;
+        }
+
         &:nth-of-type(1) {
             top: 400px;
             left: 70px;
+
+            @media screen and (max-width: 1200px) {
+                left: 10px;
+            }
         }
 
         &:nth-of-type(2) {
             top: 415px;
             left: 800px;
+
+            @media screen and (max-width: 1200px) {
+                left: 710px;
+            }
         }
 
         &:nth-of-type(3) {
             top: 668px;
             left: 20px;
+
+            @media screen and (max-width: 1200px) {
+                left: 10px;
+            }
         }
 
         &:nth-of-type(4) {
             top: 690px;
             left: 810px;
+
+            @media screen and (max-width: 1200px) {
+                left: 730px;
+            }
         }
     }
 
@@ -48,5 +158,18 @@
         line-height: 1.2;
         font-size: 1.499rem;
         font-weight: 300;
+
+        @include respond-to(wide) {
+            font-size: 2rem;
+            line-height: 1.1;
+        };
+
+        @include respond-to(tablet) {
+            font-size: 1.3rem;
+        };
+
+        @include respond-to(smartphone) {
+            font-size: 1rem;
+        };
     }
 }

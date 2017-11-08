@@ -1,0 +1,10 @@
+.popup.popup2
+    .popup__window.popup2__window
+        a(href="#").popup2__prev
+        a(href="#").popup2__next
+        a(href="#").popup2__close-btn
+        .popup2__container.swiper-container
+            .popup2__wrapper.swiper-wrapper
+                - for (var i = 0; i < 3; i++)
+                    .popup2__slide.swiper-slide
+                        img(src="img/ds-" + (i + 1) + "-" + (i + 1)+ ".jpg").popup2__slide-img
